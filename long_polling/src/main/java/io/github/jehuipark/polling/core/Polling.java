@@ -73,27 +73,27 @@ public class Polling<T> {
 		return responseMap;
 	}
 
-	public void setObserve(Observe<T> observe) {
+	void setObserve(Observe<T> observe) {
 		this.observe = observe;
 	}
 
-	public void setValidation(Validation<T> validation) {
+	void setValidation(Validation<T> validation) {
 		this.validation = validation;
 	}
 
-	public long getInterval() {
+	long getInterval() {
 		return interval;
 	}
 
-	public void setInterval(long interval) {
+	void setInterval(long interval) {
 		this.interval = interval;
 	}
 
-	public long getTransactionTime() {
+	long getTransactionTime() {
 		return transactionTime;
 	}
 
-	public void setTransactionTime(long transactionTime) {
+	void setTransactionTime(long transactionTime) {
 		this.transactionTime = transactionTime;
 	}
 

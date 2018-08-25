@@ -28,7 +28,7 @@ public class PollingManager {
 	 *            전체 생명주기
 	 * @return 초기화된 폴링
 	 */
-	public Polling<?> start(String id, long lifeTime, Builder<?> builder) {
+	public ResponseMap<?> start(String id, long lifeTime, Builder<?> builder) {
 		boolean refresh = false;
 		if (pollingMap.get(id) == null) {
 			create(id, lifeTime, builder);
@@ -36,8 +36,7 @@ public class PollingManager {
 			refresh = true;
 		}
 		
-		start(id, refresh);
-		return pollingMap.get(id);
+		return start(id, refresh);
 	}
 
 	/**
