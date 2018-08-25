@@ -4,11 +4,11 @@
 
 ### example
 ``` java
-    	long LIFE_TIME = 10000;
+public ResponseMap<Integer> progress(String id) {
+		long LIFE_TIME = 10000;
     	long TRANSACTION = 5000;
     	long INTERVAL = 100;
     	
-    	PollingManager pollingManager = PollingManager.Lazy.INSTANCE;
     	Builder<Integer> builder = new Builder<>();
     	builder.setInterval(INTERVAL)
     	.setTransactionTime(TRANSACTION)
@@ -22,5 +22,6 @@
 			return isUpdate;
     	});
     	
-    	pollingManager.start("id", LIFE_TIME, builder);
+    	return (ResponseMap<Integer>) pollingManager.start(id, LIFE_TIME, builder);
+	}
 ```
