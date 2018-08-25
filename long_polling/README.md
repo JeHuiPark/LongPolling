@@ -3,7 +3,7 @@
 [LongPolling(지연응답)의 개념](https://d2.naver.com/helloworld/1052 "참조")
 
 ### example
-```
+``` java
     	long LIFE_TIME = 10000;
     	long TRANSACTION = 5000;
     	long INTERVAL = 100;
