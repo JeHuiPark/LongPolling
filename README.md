@@ -4,6 +4,8 @@
 
 2018-08-26 v0.1.1 일부분 수정
 
+2018-08-26 v0.1.1 sysout 제거
+
 
 ### gradle dependency 
 ``` groovy
@@ -13,6 +15,6 @@ repositories{
 }
 dependencies {
   // another dependencies...
-  compile 'com.github.JeHuiPark:LongPolling:0.1'
+  compile 'com.github.JeHuiPark:LongPolling:0.1.2'
 }
 ```
