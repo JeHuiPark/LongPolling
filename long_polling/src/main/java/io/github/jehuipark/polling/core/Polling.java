@@ -130,7 +130,6 @@ public class Polling<T> {
 	 * @param commandCode
 	 */
 	void destroy(int commandCode) {
-		System.out.println("polling destroy");
 		setCommandState(commandCode);
 		transaction.interrupt();
 	}

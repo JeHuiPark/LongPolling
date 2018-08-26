@@ -86,7 +86,6 @@ public class PollingManager {
 	 * @param lifeTime
 	 */
 	private void create(String id, long lifeTime, Builder<?> builder) {
-		System.out.println("create");
 		Polling<?> polling = builder.build();
 		pollingMap.put(id, polling);
 		LifeThread lifeThread = new LifeThread(id, lifeTime);
@@ -100,7 +99,6 @@ public class PollingManager {
 	 * @param id
 	 */
 	private void refresh(String id) {
-		System.out.println("refresh");
 		LifeThread lifeThread = threadMap.get(id);
 		if (lifeThread != null)
 			lifeThread.refresh();
@@ -112,7 +110,6 @@ public class PollingManager {
 	 * @param id
 	 */
 	private void remove(String id) {
-		System.out.println("remove id");
 		threadMap.remove(id);
 		pollingMap.remove(id);
 	}
@@ -185,7 +182,6 @@ public class PollingManager {
 		 * @param commandCode
 		 */
 		public void _desytroy(int commandCode) {
-			System.out.println("LifeThread _desytroy");
 			if (polling != null)
 				polling.destroy(commandCode);
 		}
